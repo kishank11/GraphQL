@@ -22,4 +22,6 @@ app.use(
   })
 );
 
-app.listen(port, console.log(`Server running on port ${port}`));
+app.listen(port,(req,res)=>{
+  res.send("HHHHH");
+  console.log(`Server running on port ${port}`)});
