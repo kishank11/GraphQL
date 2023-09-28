@@ -21,7 +21,10 @@ app.use(
     graphiql: process.env.NODE_ENV === 'development',
   })
 );
+app.use('/', function (req, res, next) {
+  res.send({ "name": "KISHAN" });
+  next();
+});
+app.listen(port,()=>{
 
-app.listen(port,(req,res)=>{
-  res.send("HHHHH");
   console.log(`Server running on port ${port}`)});
