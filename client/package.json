@@ -40,5 +40,5 @@
     ]
   },
   
-  "proxy":"https://qlbackend.onrender.com"
+  "proxy":"http://localhost:5000"
 }
