@@ -12,7 +12,7 @@ const app = express();
 // Connect to database
 connectDB();
 
-app.use(express.static("public"));
+app.use(express.static("../public"));
 
 app.get("*",(req,res)=>{
 
