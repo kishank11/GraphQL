@@ -15,7 +15,8 @@ connectDB();
 app.use(express.static("public"));
 
 app.get("*",(req,res)=>{
- res.sendFile(path.resolve(__dirname,"public","index.html"))
+
+ res.sendFile(path.resolve(__dirname,"../public","index.html"))
 })
 
 app.use(cors());
@@ -28,9 +29,10 @@ app.use(
   })
 );
 app.use('/', function (req, res, next) {
+  
   res.send({ "name": "KISHAN" });
   next();
 });
 app.listen(port,()=>{
-
+  console.log(path.resolve(__dirname,"../public","index.html"))
   console.log(`Server running on port ${port}`)});
